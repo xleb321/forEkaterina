@@ -1,5 +1,8 @@
 document.querySelectorAll('div').forEach((elem) => {
-	elem.addEventListener('click', (e) => {
-		console.log((e.target.style.color = 'rgb(255,255,255)'));
+	elem.addEventListener('dblclick', (e) => {
+		document.querySelectorAll('div').forEach((elem) => {
+			elem.classList.remove('active');
+		});
+		e.target.classList.add('active');
 	});
 });

@@ -1,9 +1,16 @@
 :root {
+	--wh: calc(1vh * 1vw);
 	--bg-color: rgb(10, 10, 10);
 	--white-color: rgb(255, 255, 255);
 }
 
-.katyLoh {
+.katyoh {
 	background: var(--bg-color);
 	color: var(--white-color);
+}
+
+.active {
+	background: rgb(239, 151, 63);
+	text-align: center;
+	transition: 0.3s;
 }
