@@ -1,4 +1,9 @@
+:root {
+	--bg-color: rgb(10, 10, 10);
+	--white-color: rgb(255, 255, 255);
+}
+
 .katyLoh {
-	background: rgb(0, 0, 0);
-	color: rgb(255, 255, 255);
+	background: var(--bg-color);
+	color: var(--white-color);
 }
