@@ -8,10 +8,11 @@
 	--wh: calc(1vh * 1vw);
 	--bg-color: rgb(10, 10, 10);
 	--white-color: rgb(255, 255, 255);
+	--accent: rgb(240, 123, 0);
 }
 
 body {
-	font-size: 25px;
+	font-size: 20px;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -25,11 +26,18 @@ header {
 
 header .headSup {
 	height: 100%;
-	width: 1050px;
+	width: 100%;
+	max-width: 1050px;
 	padding: 0 20px;
 	display: flex;
 	flex-direction: column;
-	background-color: grey;
+}
+
+header .headSup .topLine {
+	height: 70px;
+	margin: 10px 0;
+	display: flex;
+	justify-content: space-between;
 }
 
 header .headSup .topLine .logo {
@@ -37,12 +45,71 @@ header .headSup .topLine .logo {
 	align-items: center;
 }
 
-header .headSup .logo .logoText {
+header .headSup .topLine .logo .logoText {
 	display: flex;
 	flex-direction: column;
 }
+header .headSup .topLine .logo .logoText span:nth-child(1) {
+	font-size: 1.5em;
+}
+header .headSup .topLine .logo .logoText .bot {
+	color: var(--accent);
+}
 
-header .headSup .logo img {
+header .headSup .topLine .logo img {
 	width: 70px;
 	margin: 0 10px 0 0;
+}
+header .headSup .topLine .contact {
+	display: flex;
+	align-items: center;
+}
+
+header .headSup .botLne {
+	height: 50px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+header .headSup .botLne span {
+	height: 100%;
+	width: calc(100% / 7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	white-space: nowrap;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+header .headSup .botLne .accent {
+	background: var(--accent);
+	color: var(--white-color);
+}
+
+header .headSup .botLne span:hover {
+	background: var(--accent);
+	color: var(--white-color);
+}
+header .headSup .botLne span .word {
+	pointer-events: none;
+}
+header .headSup .botLne span .icon {
+	pointer-events: none;
+	display: none;
+}
+
+@media (max-width: 750px) {
+	header .headSup .botLne span .word {
+		display: none;
+	}
+	header .headSup .botLne span .icon {
+		display: flex;
+	}
+}
+
+@media (max-width: 440px) {
+	header .headSup .topLine .logo .logoText {
+		display: none;
+	}
 }
