@@ -11,12 +11,102 @@
 	box-sizing: inherit;
 }
 
-.container{
-	max-width: 1090px;
-	margin: 0 auto;
+body{
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
+header{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.container{
+	width: 100%;
+	max-width: 1090px;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+}
+
+
 .logo{
-	width: 200px;
-	height: 200px;
+	width: 80px;
+	height: 80px;
+}
+
+.header_left{
+	display: flex;
+	padding-left: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.ka{
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+}
+
+.kol{
+	font-size: 30px;
+}
+
+.shin{
+	font-size: 20px;
+	color: orange;
+}
+
+.header_right{
+	display: flex;
+	padding-right: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.text_{
+	font-size: 30px;
+}
+
+.bx{
+	font-size: 30px;
+	color: orange;
+}
+
+.ka_{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+nav{
+	width: 100%;
+	background-color: rgba(196, 192, 192, 0.893);
+}
+
+nav.container{
+	width: 100%;
+	max-width: 1090px;
+	height: 50px;
+	padding: 0 20px 0 20px;
+}
+
+.menu_{
+	font-size: 20px;
+}
+
+.nav{
+	display: flex;
+	align-items: center;
+} 
+
+span.menu_:hover{
+	background-color: orange;
+	
 }
