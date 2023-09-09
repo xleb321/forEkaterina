@@ -1,16 +1,99 @@
-:root {
-	--wh: calc(1vh * 1vw);
-	--bg-color: rgb(10, 10, 10);
-	--white-color: rgb(255, 255, 255);
+
+html{
+	box-sizing: border-box;
 }
 
-.katyoh {
-	background: var(--bg-color);
-	color: var(--white-color);
+*,
+*::before,
+*::after{
+	box-sizing: inherit;
 }
 
+/* 
 .active {
 	background: rgb(239, 151, 63);
 	text-align: center;
 	transition: 0.3s;
+} */
+
+body{
+	font-family: sans-serif;
+	
+}
+
+.container{
+	max-width: 1100px;
+	padding: 0 10px;
+	margin: 0 auto;
+	
+}
+
+.headerUp{
+	display: flex;
+	justify-content: space-between;
+}
+
+.left_{
+	display: flex;
+	justify-content: flex-start;
+	
+}
+
+
+
+.logo{
+	height: 70px;
+	width: 70px;
+}
+ul{
+	list-style: none;
+}
+
+.kol{
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.header{
+	
+	max-width: 1090px;
+	max-height: 300px;
+
+}
+
+span.shin{
+	color: orange;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+a{
+	color: black;
+	text-decoration: none;
+}
+
+.menu_list{
+	display: flex;
+	justify-content: space-around;
+}
+
+.header_Down{
+	height: 50px;
+	background-color: rgba(193, 193, 193, 0.826);
+}
+
+.menu_item{
+	background: orange;
+	transition: 0.3s;
+	padding: 16px;
+}
+
+.ka{
+	display: flex;
+	flex-direction: column;
+	padding: 0 0 0 200px;
+}
+
+.logo_header{
+	margin: 0 0 0 20px
 }
