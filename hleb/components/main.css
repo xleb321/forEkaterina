@@ -9,6 +9,7 @@
 	--bg-color: rgb(10, 10, 10);
 	--white-color: rgb(255, 255, 255);
 	--accent: rgb(240, 123, 0);
+	--grey: rgb(233, 233, 233);
 }
 
 body {
@@ -70,6 +71,8 @@ header .headSup .botLne {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+	background-color: var(--grey);
+	border-radius: 20px;
 }
 header .headSup .botLne span {
 	height: 100%;
@@ -79,7 +82,6 @@ header .headSup .botLne span {
 	align-items: center;
 	white-space: nowrap;
 	cursor: pointer;
-	transition: 0.3s;
 }
 
 header .headSup .botLne .accent {
@@ -87,10 +89,33 @@ header .headSup .botLne .accent {
 	color: var(--white-color);
 }
 
-header .headSup .botLne span:hover {
-	background: var(--accent);
-	color: var(--white-color);
+header .headSup .botLne span:first-child.accent {
+	border-radius: 20px 0 0 20px;
 }
+
+header .headSup .botLne span:last-child.accent {
+	border-radius: 0 20px 20px 0;
+}
+
+header .headSup .botLne span:hover {
+	animation: 0.3s hoverHeder forwards;
+}
+
+@keyframes hoverHeder {
+	100% {
+		background: var(--accent);
+		color: var(--white-color);
+	}
+}
+
+header .headSup .botLne span:first-child:hover {
+	border-radius: 20px 0 0 20px;
+}
+
+header .headSup .botLne span:last-child:hover {
+	border-radius: 0 20px 20px 0;
+}
+
 header .headSup .botLne span .word {
 	pointer-events: none;
 }
