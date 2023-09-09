@@ -1,60 +1,64 @@
-* {
+*,
+html {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
+html {
+	width: 100%;
+	height: 100%;
+}
 
 :root {
+	--font-size: calc(1rem + 2 * (100vw - 320px) / 780);
 	--white-color: rgb(255, 255, 255);
 	--accent: rgb(240, 123, 0);
 	--grey: rgb(233, 233, 233);
+	--margins-edge: 20px;
+	--border-radius: 15px;
 }
 
 body {
-	font-size: 20px;
+	font-size: var(--font-size);
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 header {
 	width: 100%;
-	height: 140px;
+	height: calc(var(--font-size) * 15);
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin: 0 auto;
 }
-
 header .headSup {
 	height: 100%;
 	width: 100%;
-	max-width: 1050px;
-	padding: 0 20px;
+	max-width: calc(var(--font-size) * 80);
+	padding: 0 var(--margins-edge);
 	display: flex;
 	flex-direction: column;
 }
-
 header .headSup .topLine {
-	height: 70px;
+	height: calc(var(--font-size) * 5);
 	margin: 10px 0;
 	display: flex;
 	justify-content: space-between;
 }
-
 header .headSup .topLine .logo {
 	display: flex;
 	align-items: center;
 }
-
 header .headSup .topLine .logo .logoText {
 	display: flex;
 	flex-direction: column;
 }
 header .headSup .topLine .logo .logoText span:nth-child(1) {
-	font-size: 1.5em;
+	font-size: calc(var(--font-size) * 1.5);
 }
 header .headSup .topLine .logo .logoText .bot {
 	color: var(--accent);
 }
-
 header .headSup .topLine .logo img {
 	width: 70px;
 	margin: 0 10px 0 0;
@@ -63,14 +67,13 @@ header .headSup .topLine .contact {
 	display: flex;
 	align-items: center;
 }
-
 header .headSup .botLne {
 	height: 50px;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	background-color: var(--grey);
-	border-radius: 20px;
+	border-radius: 15px;
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 header .headSup .botLne span {
@@ -82,22 +85,81 @@ header .headSup .botLne span {
 	white-space: nowrap;
 	cursor: pointer;
 }
-
 header .headSup .botLne .accent {
 	background: var(--accent);
 	color: var(--white-color);
 }
-
 header .headSup .botLne span:first-child.accent {
-	border-radius: 20px 0 0 20px;
+	border-radius: var(--border-radius) 0 0 var(--border-radius);
 }
-
 header .headSup .botLne span:last-child.accent {
-	border-radius: 0 20px 20px 0;
+	border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
-
 header .headSup .botLne span:hover {
 	animation: 0.3s hoverHeder forwards;
+}
+header .headSup .botLne span:first-child:hover {
+	border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+header .headSup .botLne span:last-child:hover {
+	border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+header .headSup .botLne span .word {
+	pointer-events: none;
+}
+header .headSup .botLne span .icon {
+	pointer-events: none;
+	display: none;
+}
+
+section#slider {
+	margin: 20px 0;
+	width: 100%;
+	height: 700px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+section#slider .content {
+	position: relative;
+	width: 100%;
+	max-width: calc(var(--font-size) * 80);
+	height: 100%;
+	padding: 0 var(--margins-edge);
+}
+
+section#slider .content .slide {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+section#slider .content .slide img {
+	width: calc(var(--font-size) * 30);
+}
+
+section#slider .content .slide .text p {
+	font-size: calc(var(--font-size) * 2);
+}
+
+section#slider .content #btn {
+	position: absolute;
+	z-index: 100;
+	top: 50%;
+	font-size: calc(var(--font-size) * 2);
+	cursor: pointer;
+	transition: 0.3s;
+}
+section#slider .content #btn:hover {
+	transform: scale(1.5);
+}
+section#slider .content #btn.left {
+	left: calc(0px + var(--margins-edge));
+}
+section#slider .content #btn.right {
+	right: calc(0px + var(--margins-edge));
 }
 
 @keyframes hoverHeder {
@@ -105,22 +167,6 @@ header .headSup .botLne span:hover {
 		background: var(--accent);
 		color: var(--white-color);
 	}
-}
-
-header .headSup .botLne span:first-child:hover {
-	border-radius: 20px 0 0 20px;
-}
-
-header .headSup .botLne span:last-child:hover {
-	border-radius: 0 20px 20px 0;
-}
-
-header .headSup .botLne span .word {
-	pointer-events: none;
-}
-header .headSup .botLne span .icon {
-	pointer-events: none;
-	display: none;
 }
 
 @media (max-width: 750px) {
@@ -131,7 +177,6 @@ header .headSup .botLne span .icon {
 		display: flex;
 	}
 }
-
 @media (max-width: 440px) {
 	header .headSup .topLine .logo .logoText {
 		display: none;
