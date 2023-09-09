@@ -17,12 +17,14 @@ document.querySelector('#slider').addEventListener('click', (e) => {
 	}
 });
 
+// GSAP
 if (ScrollTrigger.isTouch !== 1) {
 	gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+
 	ScrollSmoother.create({
 		wrapper: '.wrapper',
 		content: '.content',
-		smooth: 1.25,
+		smooth: 2,
 		effects: true,
 	});
 }

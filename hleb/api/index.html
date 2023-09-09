@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sazonov Gleb</title>
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+
+		<script src="./src/gsap/gsap.min.js" defer></script>
+		<script src="./src/gsap/ScrollTriger.min.js" defer></script>
+		<script src="./src/gsap/ScrollSmoother.min.js" defer></script>
+		<script src="./src/gsap/ScrollToPlugin.min.js" defer></script>
+
+		<script type="module" src="./components/main.js" defer></script>
+		<link rel="stylesheet" href="./components/style.css" />
+
+		<style>
+			body {
+				background: black;
+				color: white;
+			}
+		</style>
+	</head>
+	<body class="dark">
+		<canvas></canvas>
+		<div class="wrapper">
+			<div class="content">
+				<header data-lag="0.01">
+					<div class="logo">
+						<i class="bx bx-game"></i>
+					</div>
+					<div class="navBar">
+						<div class="navBar__elem">
+							<a href="#home" class="menu-item">
+								<div class="icon"><i class="bx bx-home-alt-2"></i></div>
+								<div class="text">HOME</div>
+							</a>
+						</div>
+						<div class="navBar__elem">
+							<a href="#about" class="menu-item">
+								<div class="icon"><i class="bx bx-user"></i></div>
+								<div class="text">ABOUT</div>
+							</a>
+						</div>
+						<div class="navBar__elem">
+							<a href="#portfolio" class="menu-item">
+								<div class="icon"><i class="bx bxs-briefcase"></i></div>
+								<div class="text">PORTFOLIO</div>
+							</a>
+						</div>
+						<div class="navBar__elem">
+							<a href="#contact" class="menu-item">
+								<div class="icon"><i class="bx bx-phone"></i></div>
+								<div class="text">CONTACT</div>
+							</a>
+						</div>
+					</div>
+					<div class="settings">
+						<div id="thems">
+							<div class="moon" data-add="dark" data-remove="light">
+								<i class="bx bx-moon"></i>
+							</div>
+							<div class="sun" data-add="light" data-remove="dark">
+								<i class="bx bx-sun"></i>
+							</div>
+						</div>
+					</div>
+				</header>
+
+				<section id="home">
+					<div data-speed="0.5" data-lag="0.3" class="text">
+						<span>Sazonov Gleb</span>
+						<span>Web Developer</span>
+					</div>
+					<img data-speed=".3" class="hero" src="./img/img1.png" />
+				</section>
+
+				<figcaption></figcaption>
+
+				<section id="about">
+					<div data-speed="0.9" class="info">ABOUT</div>
+					<div data-speed="0.75" class="about__left">
+						<i class="bx bxl-html5 about__item"></i>
+						<i class="bx bxl-nodejs about__item"></i>
+					</div>
+					<div class="about__right">
+						<i class="bx bxl-css3 about__item"></i>
+						<i class="bx bxl-github about__item"></i>
+						<i class="bx bxl-postgresql about__item"></i>
+					</div>
+				</section>
+
+				<section data-speed="1.6" id="portfolio">
+					<div data-speed="0.75" class="info">PORTFOLIO</div>
+
+					<div data-speed="0.75" class="cards">
+						<div class="card">
+							<a href="http://mir-wheels.ru">
+								<img src="./img/card1.png" />
+								<div class="section">first project</div>
+								<div class="btn">
+									<i class="bx bxs-hand-up"></i>
+								</div>
+							</a>
+						</div>
+					</div>
+				</section>
+
+				<section data-speed="1.6" id="contact">
+					<div data-speed="0.9" class="info">CONTACT</div>
+					<div data-speed="0.8" class="found">
+						<div class="hi">SAY HELLO</div>
+						<div>
+							<a href="https://t.me/xleb1335">t.me/XLEB</a>
+						</div>
+						<div>
+							<a href="gleb.sazonov.58@mail.ru">gleb.sazonov.58@mail.ru</a>
+						</div>
+					</div>
+				</section>
+
+				<section id="footer"></section>
+			</div>
+		</div>
+	</body>
+</html>
