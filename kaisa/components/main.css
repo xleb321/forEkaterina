@@ -1,5 +1,5 @@
-
-*,html{
+*,
+html {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -7,28 +7,28 @@
 
 *,
 *::before,
-*::after{
+*::after {
 	box-sizing: inherit;
 }
 
-:root{
-	--orangee: rgb(239,123,0);
-	--greyy: rgb(233,233,233);
+:root {
+	--orangee: rgb(239, 123, 0);
+	--greyy: rgb(233, 233, 233);
+	--accent: rgb(255, 255, 255);
 }
 
-body{
+body {
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
 }
 
-header{
-	width: 100%; 
+header {
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.container{
+.container {
 	width: 100%;
 	max-width: 1090px;
 	height: 100px;
@@ -37,66 +37,64 @@ header{
 	padding: 0 20px;
 }
 
-
-.logo{
+.logo {
 	width: 80px;
 	height: 80px;
 }
 
-.header_left{
+.header_left {
 	display: flex;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.ka{
+.ka {
 	display: flex;
 	flex-direction: column;
 	padding: 10px;
 }
 
-.kol{
+.kol {
 	font-size: 30px;
 }
 
-.shin{
+.shin {
 	font-size: 20px;
 	color: var(--orangee);
 }
 
-.header_right{
+.header_right {
 	display: flex;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.text_{
+.text_ {
 	font-size: 30px;
 }
 
-.bx{
+div.ka_ i.bx {
 	font-size: 30px;
 	color: var(--orangee);
 }
 
-.ka_{
+.ka_ {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 20px;
 }
 
-
-nav{
+nav {
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	padding: 0 20px;
 }
 
-.container_{
+.container_ {
 	width: 100%;
 	max-width: 1050px;
 	height: 50px;
@@ -106,45 +104,103 @@ nav{
 	background-color: var(--greyy);
 }
 
-
-.menu_{
+.menu_ {
 	font-size: 20px;
 	display: flex;
 	justify-content: center;
 }
 
-.nav{
+.nav {
 	display: flex;
 	align-items: center;
 	width: 100%;
-} 
-
-span.menu__:hover{
-	animation: 0.3s hi forwards;
 }
 
-span.menu_{
+.container_ span {
 	width: calc(100% / 7);
 	height: 100%;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 }
 
-span.first_:first-child:hover{
+.container_ span:hover {
+	animation: 0.3s hi forwards;
+}
+
+div.container_ span:first-child:hover {
 	animation: 0.3s hi forwards;
 	border-radius: 20px 0 0 20px;
-	
 }
 
-span.last_:last-child:hover{
+div.container_ span:last-child:hover {
 	animation: 0.3s hi forwards;
 	border-radius: 0 20px 20px 0;
 }
 
-@keyframes hi{
+@keyframes hi {
 	100% {
-		color: white;
+		color: var(--accent);
 		background-color: var(--orangee);
 	}
 }
+
+div.container_ span:first-child {
+	border-radius: 20px 0 0 20px;
+}
+
+div.container_ span:last-child {
+	border-radius: 0 20px 20px 0;
+}
+
+.accent {
+	background-color: var(--orangee);
+	color: var(--accent);
+}
+
+span.menu_ {
+	pointer-events: none;
+}
+span.icon {
+	pointer-events: none;
+	display: none;
+}
+
+@media (max-width: 750px) {
+	span.menu_ {
+		display: none;
+	}
+	span.icon {
+		display: flex;
+	}
+}
+
+@media (max-width: 440px) {
+	.ka {
+		display: none;
+	}
+}
+
+/* .dop {
+	width: 100%;
+	max-width: 1050px;
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
+}
+
+.container_karusel {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.karusel span.content img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+} */

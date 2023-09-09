@@ -1,41 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./components/main.css">
-	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-	<title>Document</title>
-</head>
-<body>
-	<header>
-		<div class="container">
-			<div class="header_left">
-				<img src="./img/Logo-2.png" alt="logo" class="logo">
-				<div class="ka">
-					<span class="kol">МИР КОЛЁС</span>
-					<span class="shin">ШИНЫ И ДИСКИ</span>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./components/main.css" />
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+		<title>Document</title>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="header_left">
+					<img src="./img/Logo-2.png" alt="logo" class="logo" />
+					<div class="ka">
+						<span class="kol">МИР КОЛЁС</span>
+						<span class="shin">ШИНЫ И ДИСКИ</span>
+					</div>
+				</div>
+				<div class="header_right">
+					<div class="ka_">
+						<i class="bx bx-phone"></i>
+						<span class="text_">Контакты</span>
+						<i class="bx bx-cart"></i>
+					</div>
 				</div>
 			</div>
-			<div class="header_right">
-				<div class="ka_">
-					<i class='bx bx-phone'></i>
-					<span class="text_">Контакты</span>
-					<i class='bx bx-cart'></i>
+		</header>
+		<nav>
+			<div class="container_">
+				<span class="accent">
+					<span class="menu_">Главная</span>
+					<span class="icon">
+						<i class="bx bxs-home"></i>
+					</span>
+				</span>
+				<span>
+					<span class="menu_">Контакты</span>
+					<span class="icon">
+						<i class="bx bxs-phone"></i>
+					</span>
+				</span>
+				<span>
+					<span class="menu_">Шины</span>
+					<span class="icon">
+						<i class="bx bxs-color"></i>
+					</span>
+				</span>
+				<span>
+					<span class="menu_">Диски</span>
+					<span class="icon">
+						<i class="bx bx-color"></i>
+					</span>
+				</span>
+				<span>
+					<span class="menu_">Сервис</span>
+					<span class="icon">
+						<i class="bx bxs-server"></i>
+					</span>
+				</span>
+				<span>
+					<span class="menu_">Акции</span>
+					<span class="icon">
+						<i class="bx bx-medal"></i>
+					</span>
+				</span>
+				<span>
+					<span class="menu_">Оплата</span>
+					<span class="icon">
+						<i class="bx bx-cart-add"></i>
+					</span>
+				</span>
+			</div>
+		</nav>
+
+		<!-- <div class="container_karusel">
+			<span class="dop">
+				<button class="btn btn_1"><i class="bx bx-chevron-left"></i></button>
+				<div class="karusel">
+					<span class="content">.</span>
 				</div>
+				<button class="btn btn_2"><i class="bx bx-chevron-right"></i></button>
+			</span>
+		</div> -->
+
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+				<div class="numdertext">1/3</div>
+				<img src="./img/kar_1.png" style="width: 100%" alt="" />
+				<div class="text">Text</div>
 			</div>
 		</div>
-	</header>
-	<nav>
-		<div class="container_">
-			<span class="menu_ first_">Главная</span>
-			<span class="menu_ menu__">Контакты</span>
-			<span class="menu_ menu__">Шины</span>
-			<span class="menu_ menu__">Диски</span>
-			<span class="menu_ menu__">Сервис</span>
-			<span class="menu_ menu__">Акции</span>
-			<span class="menu_ last_">Оплата</span>
-		</div>
-	</nav>
-</body>
+
+		<script src="./components/main.js"></script>
+	</body>
 </html>

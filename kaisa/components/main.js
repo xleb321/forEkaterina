@@ -1,8 +1,9 @@
-document.querySelectorAll('li').forEach((elem) => {
+document.querySelectorAll('.container_ span').forEach((elem) => {
 	elem.addEventListener('click', (e) => {
-		document.querySelectorAll('li').forEach((elem) => {
-			elem.classList.remove('.menu_item');
+		document.querySelectorAll('.container_ span').forEach((elem) => {
+			elem.classList.remove('accent');
 		});
-		e.target.classList.add('.menu_item');
+		e.target.classList.add('accent');
 	});
 });
+
