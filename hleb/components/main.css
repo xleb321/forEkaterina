@@ -60,7 +60,7 @@ header .headSup .topLine .logo .logoText .bot {
 	color: var(--accent);
 }
 header .headSup .topLine .logo img {
-	width: 70px;
+	width: calc(var(--font-size) * 3);
 	margin: 0 10px 0 0;
 }
 header .headSup .topLine .contact {
@@ -88,6 +88,7 @@ header .headSup .botLne span {
 header .headSup .botLne .accent {
 	background: var(--accent);
 	color: var(--white-color);
+	pointer-events: none;
 }
 header .headSup .botLne span:first-child.accent {
 	border-radius: var(--border-radius) 0 0 var(--border-radius);
@@ -125,35 +126,59 @@ section#slider .content {
 	width: 100%;
 	max-width: calc(var(--font-size) * 80);
 	height: 100%;
+	display: flex;
 	padding: 0 var(--margins-edge);
 }
-
 section#slider .content .slide {
-	width: 100%;
-	height: 100%;
+	width: 0px;
+	height: 0px;
+	pointer-events: none;
+	opacity: 0;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	transition: 0.3s;
 }
-
+section#slider .content .slide.active {
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+}
 section#slider .content .slide img {
+	position: absolute;
+	top: calc(var(--font-size) * 2);
+	left: calc(var(--font-size) * 6);
 	width: calc(var(--font-size) * 30);
 }
-
-section#slider .content .slide .text p {
-	font-size: calc(var(--font-size) * 2);
+section#slider .content .slide .text {
+	position: absolute;
+	top: calc(50% - calc(var(--font-size) * 1.2) * 4);
+	left: calc(55% - calc(var(--font-size) * 1.2));
+	z-index: 95;
+	max-width: min-content;
+	white-space: wrap;
+	font-size: calc(var(--font-size) * 1.2);
 }
-
+section#slider .content .slide .text p {
+	font-size: calc(var(--font-size) * 3);
+	white-space: nowrap;
+}
 section#slider .content #btn {
 	position: absolute;
 	z-index: 100;
 	top: 50%;
-	font-size: calc(var(--font-size) * 2);
+	font-size: calc(var(--font-size) * 3);
 	cursor: pointer;
 	transition: 0.3s;
 }
+section#slider .content #btn i {
+	pointer-events: none;
+}
 section#slider .content #btn:hover {
 	transform: scale(1.5);
+}
+section#slider .content #btn:active {
+	transform: scale(2.5);
 }
 section#slider .content #btn.left {
 	left: calc(0px + var(--margins-edge));
@@ -169,12 +194,28 @@ section#slider .content #btn.right {
 	}
 }
 
+@media (max-width: 1050px) {
+	section#slider .content .slide img {
+		display: none;
+	}
+	section#slider .content .slide .text {
+		margin: 0 auto;
+		left: calc(50% - calc(var(--font-size) * 1.2) * 7);
+	}
+}
 @media (max-width: 750px) {
 	header .headSup .botLne span .word {
 		display: none;
 	}
 	header .headSup .botLne span .icon {
 		display: flex;
+	}
+	section#slider .content .slide .text {
+		left: calc(50% - calc(var(--font-size) * 1.2) * 5.5);
+	}
+	section#slider .content .slide .text p {
+		white-space: wrap;
+		text-align: center;
 	}
 }
 @media (max-width: 440px) {

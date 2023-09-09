@@ -11,5 +11,10 @@ document.querySelectorAll('header .botLne span').forEach((elem) => {
 });
 
 // slider
-let slider = document.querySelectorAll('#slider');
-F_slider(slider);
+document
+	.querySelector('#slider')
+	.addEventListener('click', (e) => {
+		if (e.target.id == 'btn') {
+			F_slider(e.target);
+		}
+	});
