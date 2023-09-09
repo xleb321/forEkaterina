@@ -23,6 +23,10 @@ body {
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.content {
+	will-change: transform;
+}
+
 header {
 	width: 100%;
 	height: calc(var(--font-size) * 15);
@@ -30,6 +34,8 @@ header {
 	align-items: center;
 	justify-content: center;
 	margin: 0 auto;
+	position: relative;
+	top: 0;
 }
 header .headSup {
 	height: 100%;
@@ -158,6 +164,7 @@ section#slider .content .slide .text {
 	max-width: min-content;
 	white-space: wrap;
 	font-size: calc(var(--font-size) * 1.2);
+	text-shadow: 0px 0px 10px #ffffff;
 }
 section#slider .content .slide .text p {
 	font-size: calc(var(--font-size) * 3);

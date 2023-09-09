@@ -11,10 +11,18 @@ document.querySelectorAll('header .botLne span').forEach((elem) => {
 });
 
 // slider
-document
-	.querySelector('#slider')
-	.addEventListener('click', (e) => {
-		if (e.target.id == 'btn') {
-			F_slider(e.target);
-		}
+document.querySelector('#slider').addEventListener('click', (e) => {
+	if (e.target.id == 'btn') {
+		F_slider(e.target);
+	}
+});
+
+if (ScrollTrigger.isTouch !== 1) {
+	gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+	ScrollSmoother.create({
+		wrapper: '.wrapper',
+		content: '.content',
+		smooth: 1.25,
+		effects: true,
 	});
+}

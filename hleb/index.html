@@ -12,112 +12,130 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="./components/main.css" />
+
+		<script src="./api/gsap/gsap.min.js" defer></script>
+		<script src="./api/gsap/ScrollTriger.min.js" defer></script>
+		<script src="./api/gsap/ScrollSmoother.min.js" defer></script>
+		<script src="./api/gsap/ScrollToPlugin.min.js" defer></script>
+
 		<title>World Wiles</title>
 	</head>
 	<body>
-		<header>
-			<div class="headSup">
-				<div class="topLine">
-					<div class="logo">
-						<img src="./img/Logo-2.png" />
-						<div class="logoText">
-							<span>Мир колёс</span>
-							<span class="bot">Шины и диски</span>
+		<div class="">
+			<div class="content">
+				<header data-speed="0">
+					<div class="headSup">
+						<div class="topLine">
+							<div class="logo">
+								<img src="./img/Logo-2.png" />
+								<div class="logoText">
+									<span>Мир колёс</span>
+									<span class="bot">Шины и диски</span>
+								</div>
+							</div>
+							<div class="contact">
+								<div>+7 (928) 609-51-10</div>
+							</div>
+						</div>
+						<div class="botLne">
+							<span class="accent">
+								<span class="word">Главная</span>
+								<span class="icon">
+									<i class="bx bxs-home"></i>
+								</span>
+							</span>
+							<span>
+								<span class="word">Контакты</span>
+								<span class="icon">
+									<i class="bx bxs-phone"></i>
+								</span>
+							</span>
+							<span>
+								<span class="word">Шины</span>
+								<span class="icon">
+									<i class="bx bxs-color"></i>
+								</span>
+							</span>
+							<span>
+								<span class="word">Диски</span>
+								<span class="icon">
+									<i class="bx bx-color"></i>
+								</span>
+							</span>
+							<span>
+								<span class="word">Сервис</span>
+								<span class="icon">
+									<i class="bx bxs-server"></i>
+								</span>
+							</span>
+							<span>
+								<span class="word">Акции</span>
+								<span class="icon">
+									<i class="bx bx-medal"></i>
+								</span>
+							</span>
+							<span>
+								<span class="word">Оплата</span>
+								<span class="icon">
+									<i class="bx bx-cart-add"></i>
+								</span>
+							</span>
 						</div>
 					</div>
-					<div class="contact">
-						<div>+7 (928) 609-51-10</div>
+				</header>
+
+				<section id="slider" data-speed="0.8">
+					<div class="content">
+						<div class="slide" data-num="0">
+							<div class="img">
+								<img
+									style="transform: scale(1.2)"
+									src="./img/Slide-1_Tire.png"
+								/>
+							</div>
+							<div class="text">
+								<p>Лучшие шины</p>
+								от известных производителей.
+							</div>
+						</div>
+
+						<div class="slide active" data-num="1">
+							<div class="img">
+								<img
+									style="transform: scale(1)"
+									src="./img/Slide-2_Decor.png"
+								/>
+								<img
+									style="transform: scale(0.7)"
+									src="./img/Slide-2_Disk.png"
+								/>
+							</div>
+							<div class="text">
+								<p>Надёжные диски</p>
+								для вашего автомобиля.
+							</div>
+						</div>
+
+						<div class="slide" data-num="2">
+							<div class="img">
+								<img src="./img/Slide-3_Keys.png" />
+							</div>
+							<div class="text">
+								<p>Шиномонтаж</p>
+								предоставляем при покупке комплекта шин и дисков.
+							</div>
+						</div>
+
+						<div id="btn" class="left" data-num="-1">
+							<i class="bx bx-chevron-left"></i>
+						</div>
+						<div id="btn" class="right" data-num="1">
+							<i class="bx bx-chevron-right"></i>
+						</div>
 					</div>
-				</div>
-				<div class="botLne">
-					<span class="accent">
-						<span class="word">Главная</span>
-						<span class="icon">
-							<i class="bx bxs-home"></i>
-						</span>
-					</span>
-					<span>
-						<span class="word">Контакты</span>
-						<span class="icon">
-							<i class="bx bxs-phone"></i>
-						</span>
-					</span>
-					<span>
-						<span class="word">Шины</span>
-						<span class="icon">
-							<i class="bx bxs-color"></i>
-						</span>
-					</span>
-					<span>
-						<span class="word">Диски</span>
-						<span class="icon">
-							<i class="bx bx-color"></i>
-						</span>
-					</span>
-					<span>
-						<span class="word">Сервис</span>
-						<span class="icon">
-							<i class="bx bxs-server"></i>
-						</span>
-					</span>
-					<span>
-						<span class="word">Акции</span>
-						<span class="icon">
-							<i class="bx bx-medal"></i>
-						</span>
-					</span>
-					<span>
-						<span class="word">Оплата</span>
-						<span class="icon">
-							<i class="bx bx-cart-add"></i>
-						</span>
-					</span>
-				</div>
+				</section>
 			</div>
-		</header>
-
-		<section id="slider">
-			<div class="content">
-				<div class="slide " data-num="0">
-					<div class="img">
-						<img style="transform: scale(1.2)" src="./img/Slide-1_Tire.png" />
-					</div>
-					<div class="text">
-						<p>Лучшие шины</p>
-						от известных производителей.
-					</div>
-				</div>
-
-				<div class="slide active" data-num="1">
-					<div class="img">
-						<img style="transform: scale(1)" src="./img/Slide-2_Decor.png" />
-						<img style="transform: scale(0.7)" src="./img/Slide-2_Disk.png" />
-					</div>
-					<div class="text">
-						<p>Надёжные диски</p>
-						для вашего автомобиля.
-					</div>
-				</div>
-
-				<div class="slide" data-num="2">
-					<div class="img">
-						<img src="./img/Slide-3_Keys.png" />
-					</div>
-					<div class="text">
-						<p>Шиномонтаж</p>
-						предоставляем при покупке комплекта шин и дисков.
-					</div>
-				</div>
-
-				<div id="btn" class="left" data-num="-1">
-					<i class="bx bx-chevron-left"></i>
-				</div>
-				<div id="btn" class="right" data-num="1">
-					<i class="bx bx-chevron-right"></i>
-				</div>
-			</div>
-		</section>
-
+		</div>
 		<script type="module" src="./components/main.js"></script>
 	</body>
 </html>
