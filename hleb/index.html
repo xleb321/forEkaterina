@@ -12,6 +12,7 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="./components/main.css" />
+		<link rel="stylesheet" href="./components/header/style.css" />
 
 		<script src="./api/gsap/gsap.min.js" defer></script>
 		<script src="./api/gsap/ScrollTriger.min.js" defer></script>
@@ -28,7 +29,7 @@
 						<div class="topLine">
 							<div class="logo">
 								<img src="./img/Logo-2.png" />
-								<div class="logoText">
+								<div class="logoText" onclick="main()">
 									<span>Мир колёс</span>
 									<span class="bot">Шины и диски</span>
 								</div>
@@ -38,43 +39,43 @@
 							</div>
 						</div>
 						<div class="botLne">
-							<span class="accent">
+							<span id="main" class="accent">
 								<span class="word">Главная</span>
 								<span class="icon">
 									<i class="bx bxs-home"></i>
 								</span>
 							</span>
-							<span>
+							<span id="contacts">
 								<span class="word">Контакты</span>
 								<span class="icon">
 									<i class="bx bxs-phone"></i>
 								</span>
 							</span>
-							<span>
+							<span id="tires">
 								<span class="word">Шины</span>
 								<span class="icon">
 									<i class="bx bxs-color"></i>
 								</span>
 							</span>
-							<span>
+							<span id="disks">
 								<span class="word">Диски</span>
 								<span class="icon">
 									<i class="bx bx-color"></i>
 								</span>
 							</span>
-							<span>
+							<span id="service">
 								<span class="word">Сервис</span>
 								<span class="icon">
 									<i class="bx bxs-server"></i>
 								</span>
 							</span>
-							<span>
+							<span id="stocks">
 								<span class="word">Акции</span>
 								<span class="icon">
 									<i class="bx bx-medal"></i>
 								</span>
 							</span>
-							<span>
+							<span id="payment">
 								<span class="word">Оплата</span>
 								<span class="icon">
 									<i class="bx bx-cart-add"></i>
@@ -98,7 +99,6 @@
 								от известных производителей.
 							</div>
 						</div>
-
 						<div class="slide active" data-num="1">
 							<div class="img">
 								<img
@@ -115,7 +115,6 @@
 								для вашего автомобиля.
 							</div>
 						</div>
-
 						<div class="slide" data-num="2">
 							<div class="img">
 								<img src="./img/Slide-3_Keys.png" />
@@ -125,7 +124,6 @@
 								предоставляем при покупке комплекта шин и дисков.
 							</div>
 						</div>
-
 						<div id="btn" class="left" data-num="-1" data-lag="0.5">
 							<i class="bx bx-chevron-left"></i>
 						</div>
@@ -135,7 +133,7 @@
 					</div>
 				</section>
 
-				<section id="information" data-lag="0.5">
+				<section id="information" data-speed="1.2" data-lag="1">
 					<div class="mainText">O компании</div>
 					<div class="info">
 						<p>Магазин шин и дисков</p>
