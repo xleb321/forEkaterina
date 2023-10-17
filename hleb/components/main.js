@@ -6,7 +6,6 @@ function clear() {
 	}
 }
 
-
 function headContacts(obg) {
 	obg.innerHTML += /*html*/ `
 		<section class='contactHead' data-speed="0.85" data-lag="0.5">
@@ -39,7 +38,6 @@ function infoContacts(obg) {
 	`;
 }
 
-
 // header
 document.querySelectorAll('header .botLne span').forEach((elem) => {
 	elem.addEventListener('click', (e) => {
@@ -50,17 +48,17 @@ document.querySelectorAll('header .botLne span').forEach((elem) => {
 	});
 });
 
-// GSAP
-if (ScrollTrigger.isTouch !== 1) {
-	gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+// // GSAP
+// if (ScrollTrigger.isTouch !== 1) {
+// 	gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
-	ScrollSmoother.create({
-		wrapper: '.wrapper',
-		content: '.content',
-		smooth: 2,
-		effects: true,
-	});
-}
+// 	ScrollSmoother.create({
+// 		wrapper: '.wrapper',
+// 		content: '.content',
+// 		smooth: 2,
+// 		effects: true,
+// 	});
+// }
 
 document.querySelector('#slider').addEventListener('click', (e) => {
 	if (e.target.id == 'btn') {
